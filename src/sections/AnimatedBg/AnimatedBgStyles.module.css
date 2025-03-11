@@ -1,0 +1,34 @@
+.animated_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Позади контента */
+  background-color: black; /* Космос */
+}
+
+.particle {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: starTravel linear infinite;
+}
+
+/* Анимация "полета через звезды" */
+@keyframes starTravel {
+  0% {
+    transform: translate3d(var(--start-x), var(--start-y), 0)
+      scale(var(--start-size));
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--end-x), var(--end-y), 0) scale(var(--end-size));
+    opacity: 0;
+  }
+}
