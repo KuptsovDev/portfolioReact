@@ -6,7 +6,6 @@ import Projects from "./sections/Projects/Projects";
 function App() {
   return (
     <>
-      <AnimatedBg />
       <Hero />
       <Projects />
     </>
